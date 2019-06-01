@@ -17,7 +17,7 @@ $(document).ready(function() {
         console.log(split);
         image.src = split;
 
-        $("#he").append(image);
+        $("#he").prepend(image);
       }
       // console.log(data[0].picture);
       // var split = data[0].picture.replace(/\s/g, "+");
