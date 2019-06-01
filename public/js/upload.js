@@ -82,10 +82,12 @@ $(document).ready(function() {
                 );
                 console.log(distance);
                 if (distance <= 100) {
-                  alert("You Win");
+                  $("#myModalRight").modal(open);
+                  $("#image-divRight").prepend('<img style="height: 350px" id="theImg" src="' + imgSrc + '" />');
                   submitPost(imgSrc);
                 } else {
-                  alert("try again");
+                  $("#myModal").modal(open);
+                  $("#image-div").prepend('<img style="height: 350px" id="theImg" src="' + imgSrc + '" />');
                   submitPost(imgSrc);
                   console.log(imgSrc.length);
                 }
@@ -120,7 +122,7 @@ $(document).ready(function() {
 
   function submitPost(Upload) {
     $.post("/api/uploads/", Upload, function() {
-      window.location.href = "/log";
+      //window.location.href = "/log";
     });
   }
 
