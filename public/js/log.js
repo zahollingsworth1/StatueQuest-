@@ -18,7 +18,7 @@ $(document).ready(function() {
         image.src = split;
         image.class = image;
 
-        $("#he").append(image);
+        $("#he").prepend(image);
       }
       // console.log(data[0].picture);
       // var split = data[0].picture.replace(/\s/g, "+");

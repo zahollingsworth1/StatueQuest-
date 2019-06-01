@@ -81,7 +81,7 @@ $(document).ready(function() {
                   new google.maps.LatLng(pos.lat, pos.lng)
                 );
                 console.log(distance);
-                if (distance <= 100) {
+                if (distance <= 100000) {
                   $("#myModalRight").modal(open);
                   $("#image-divRight").prepend('<img style="height: 350px" id="theImg" src="' + imgSrc + '" />');
                   submitPost(imgSrc);
