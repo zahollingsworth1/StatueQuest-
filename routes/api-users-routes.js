@@ -24,8 +24,8 @@ module.exports = function(app) {
       console.log(photoText.length);
 
       db.Upload.create({
-        picture: photoText
-        // UserId: 1
+        picture: photoText,
+        UserId: 1
       }).then(function(dbPost) {
         res.json(dbPost);
       });
