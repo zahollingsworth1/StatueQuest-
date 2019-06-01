@@ -81,12 +81,18 @@ $(document).ready(function() {
                   new google.maps.LatLng(pos.lat, pos.lng)
                 );
                 console.log(distance);
+                // if (distance <= 10000) {
+                //   alert("You Win");
                 if (distance <= 10000) {
-                  alert("You Win");
+                  $("#myModalRight").modal(open);
+                  $("#image-divRight").prepend('<img style="height: 350px" id="theImg" src="' + imgSrc + '" />');
                   submitPost(imgSrc);
                 } else {
-                  alert("try again");
+//                   alert("try again");
                   // submitPost(imgSrc);
+                  $("#myModal").modal(open);
+                  $("#image-div").prepend('<img style="height: 350px" id="theImg" src="' + imgSrc + '" />');
+                  submitPost(imgSrc);
                   console.log(imgSrc.length);
                 }
               },
@@ -120,7 +126,7 @@ $(document).ready(function() {
 
   function submitPost(Upload) {
     $.post("/api/uploads/", Upload, function() {
-      window.location.href = "/log";
+      //window.location.href = "/log";
     });
   }
 
