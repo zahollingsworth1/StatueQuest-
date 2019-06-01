@@ -7,7 +7,7 @@ $(document).ready(function() {
   function getPhoto() {
     $.get("/api/uploads", function(data) {
       console.log(data);
-      var rowsPhotos = [];
+      // var rowsPhotos = [];
       //imageSrc = data[i].picture;
       for (var i = 0; i < data.length; i++) {
         var image = new Image();
@@ -16,6 +16,7 @@ $(document).ready(function() {
         var split = data[i].picture.replace(/\s/g, "+");
         console.log(split);
         image.src = split;
+        image.class = image;
 
         $("#he").append(image);
       }
@@ -26,7 +27,7 @@ $(document).ready(function() {
 
       // $("#he").append(image);
 
-      console.log(rowsPhotos);
+      // console.log(rowsPhotos);
       //   renderStatuesList(rowsToAdd);
       //   nameInput.val("");
     });

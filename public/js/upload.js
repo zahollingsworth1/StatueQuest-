@@ -86,6 +86,8 @@ $(document).ready(function() {
                   $("#image-divRight").prepend('<img style="height: 350px" id="theImg" src="' + imgSrc + '" />');
                   submitPost(imgSrc);
                 } else {
+//                   alert("try again");
+                  // submitPost(imgSrc);
                   $("#myModal").modal(open);
                   $("#image-div").prepend('<img style="height: 350px" id="theImg" src="' + imgSrc + '" />');
                   submitPost(imgSrc);
