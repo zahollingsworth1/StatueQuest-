@@ -54,7 +54,7 @@ $(document).ready(function() {
 
       function compareLocation() {
         // Try HTML5 geolocation.
-        $("button").click(function() {
+        $("#camera--trigger").click(function() {
           event.preventDefault();
           imgSrc = $(".taken").attr("src");
           console.log(imgSrc);
@@ -83,14 +83,14 @@ $(document).ready(function() {
                 console.log(distance);
                 if (distance <= 100) {
                   $("#myModalRight").modal(open);
-                  $("#image-divRight").prepend('<img style="height: 350px" id="theImg" src="' + imgSrc + '" />');
+                   $("#image-divRight").prepend('<img style="height: 350px" id="theImg" src="' + imgSrc + '" />');
                   submitPost(imgSrc);
                 } else {
 //                   alert("try again");
                   // submitPost(imgSrc);
                   $("#myModal").modal(open);
                   $("#image-div").prepend('<img style="height: 350px" id="theImg" src="' + imgSrc + '" />');
-                  submitPost(imgSrc);
+                  // submitPost(imgSrc);
                   console.log(imgSrc.length);
                 }
               },
