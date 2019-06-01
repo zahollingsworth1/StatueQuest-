@@ -20,8 +20,8 @@ module.exports = function(app) {
     Object.keys(photo).forEach(key => {
       //console.log('key123', key); 
       var photoText = key    
-      console.log(photoText);
-      console.log(photoText.length);
+      // console.log(photoText);
+      // console.log(photoText.length);
 
       db.Upload.create({
         picture: photoText,
