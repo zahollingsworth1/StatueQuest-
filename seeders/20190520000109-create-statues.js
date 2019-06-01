@@ -9,12 +9,20 @@ module.exports = {
     // Example:
     return queryInterface.bulkInsert('Statues', [{
 
+      ASSET_NAME: "PENNOVATION",
+      ASSET_ADDR: "3401 Grays Ferry Ave",
+      SITE_NAME: "PENNOVATION",
+      LATITUDE: 39.9415,
+      LONGITUDE: -75.1995,
+    },
+    {
       ASSET_NAME: "Washington Grays Monument",
       ASSET_ADDR: "140 SOUTH BROAD ST",
       SITE_NAME: "Union League of Philadelphia",
       LATITUDE: 39.95065705,
       LONGITUDE: -75.16419533,
     },
+
     {
       ASSET_NAME: "Sister Cities Plaza",
       ASSET_ADDR: "200 N 18TH ST",
@@ -581,17 +589,17 @@ module.exports = {
       SITE_NAME: "Benjamin Franklin Parkway",
       LATITUDE: 39.96461970,
       LONGITUDE: -75.17870689
-      }], { });
-    
+    }], {});
+
   },
 
-down: (queryInterface, Sequelize) => {
+  down: (queryInterface, Sequelize) => {
 
-  // Add reverting commands here.
-  // Return a promise to correctly handle asynchronicity.
+    // Add reverting commands here.
+    // Return a promise to correctly handle asynchronicity.
 
-  // Example:
-  return queryInterface.bulkDelete('Statues', null, {});
+    // Example:
+    return queryInterface.bulkDelete('Statues', null, {});
 
-}
+  }
 };
